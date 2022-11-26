@@ -1,0 +1,10 @@
+{
+  "name": "minimal",
+  "version-string": "1.0",
+  "dependencies": [
+    {
+      "name": "wxwidgets",
+      "default-features": false
+    }
+  ]
+}
