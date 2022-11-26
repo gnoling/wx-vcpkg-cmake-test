@@ -4,8 +4,6 @@
 #ifndef WX_PRECOMP
     #include <wx/wx.h>
 #endif
-#include <wx/xrc/xmlres.h>
-
 class MyApp : public wxApp
 {
 public:
@@ -26,14 +24,11 @@ enum
 wxIMPLEMENT_APP(MyApp);
 bool MyApp::OnInit()
 {
-    wxXmlResource::Get()->InitAllHandlers();
-    wxXmlResource::Get()->Load("unlinkmkv.xrc");
-    wxFrame frame;
-    wxXmlResource::Get()->LoadFrame(&frame, NULL, "MyFrame1");
-    frame.Show(true);
+    MyFrame *frame = new MyFrame();
+    frame->Show(true);
     return true;
 }
-/*MyFrame::MyFrame()
+MyFrame::MyFrame()
     : wxFrame(NULL, wxID_ANY, "Hello World")
 {
     wxMenu *menuFile = new wxMenu;
@@ -52,7 +47,7 @@ bool MyApp::OnInit()
     Bind(wxEVT_MENU, &MyFrame::OnHello, this, ID_Hello);
     Bind(wxEVT_MENU, &MyFrame::OnAbout, this, wxID_ABOUT);
     Bind(wxEVT_MENU, [=](wxCommandEvent&) { Close(true); }, wxID_EXIT);
-}*/
+}
 void MyFrame::OnAbout(wxCommandEvent& event)
 {
     wxMessageBox("This is a wxWidgets Hello World example",
