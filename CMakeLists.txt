@@ -11,7 +11,7 @@ if (ENABLE_VCPKG)
 	endif()
 endif()
 
-project(unlinkmkv)
+project(minimal)
 
 set(wxWidgets_USE_UNICODE On)
 set(wxWidgets_USE_UNIVERSAL On)
@@ -19,10 +19,10 @@ set(wxWidgets_USE_UNIVERSAL On)
 find_package(wxWidgets REQUIRED COMPONENTS base core xrc)
 
 if(wxWidgets_FOUND)
-  set(SRCS unlinkmkv.cpp)
-  add_executable(unlinkmkv ${SRCS})
-  target_link_libraries(unlinkmkv PRIVATE wx::base wx::core wx::xrc)
+  set(SRCS minimal.cpp)
+  add_executable(minimal ${SRCS})
+  target_link_libraries(minimal PRIVATE wx::base wx::core wx::xrc)
 endif()
 
-install(TARGETS unlinkmkv DESTINATION bin)
+install(TARGETS minimal DESTINATION bin)
 
