@@ -12,7 +12,7 @@ A working build environment, cmake.
 
 ## build
 
-The below use Makefile. You could also generate, say, Ninja, by doing `cmake -GNinja ..` at the cmake step and then using `ninja` to compile.
+The below uses Makefile. You could also generate, say, Ninja, by doing `cmake -GNinja ..` at the cmake step and then using `ninja` to compile.
 
     cd wx-vcpkg-cmake-test
     mkdir build
