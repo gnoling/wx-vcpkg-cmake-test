@@ -4,7 +4,7 @@ This is a simple test / example of compiling the "minimal" WxWidgets example, us
 
 ## dependencies
 
-A working build environment, cmake.
+A working build environment, cmake. Vcpkg is cloned as a submodule, and then it handles the WxWidgets and related dependencies. You do not need either before building this example.
 
 ## clone
 
