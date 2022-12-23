@@ -14,6 +14,8 @@ Vcpkg is cloned as a submodule, and then it handles the WxWidgets and related de
 
 ## compile
 
+If using Visual Studio, make sure to open a Developer Command Prompt for the following commands and not a regular console.
+
     cd wx-vcpkg-cmake-test
     cmake -B build .
     cmake --build build
